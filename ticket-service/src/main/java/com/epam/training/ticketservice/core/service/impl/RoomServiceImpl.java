@@ -17,4 +17,9 @@ public class RoomServiceImpl extends CoreServiceImpl<Room> implements RoomServic
         super(entityRepository);
         this.roomRepository = roomRepository;
     }
+
+    @Override
+    public Room findByName(String name) {
+        return roomRepository.findByName(name);
+    }
 }

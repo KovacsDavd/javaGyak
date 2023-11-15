@@ -15,6 +15,15 @@ public class Room {
 
     private int columnNumber;
 
+    public Room() {
+    }
+
+    public Room(String name, int rowNumber, int columnNumber) {
+        this.name = name;
+        this.rowNumber = rowNumber;
+        this.columnNumber = columnNumber;
+    }
+
     public Long getId() {
         return id;
     }
@@ -45,5 +54,11 @@ public class Room {
 
     public void setColumnNumber(int columnNumber) {
         this.columnNumber = columnNumber;
+    }
+
+    @Override
+    public String toString() {
+        var res = rowNumber * columnNumber;
+        return "Room " + name + " with " + res + " seats, " + rowNumber + " rows and " + columnNumber + " columns";
     }
 }
