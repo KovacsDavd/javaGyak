@@ -13,6 +13,16 @@ public class User {
 
     private String password;
 
+    private boolean isAdmin;
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
     public String getUsername() {
         return username;
     }
