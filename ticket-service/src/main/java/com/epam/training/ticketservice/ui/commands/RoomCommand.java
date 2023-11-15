@@ -49,7 +49,7 @@ public class RoomCommand extends CommandAvailability {
         return "Room is not exists";
     }
 
-    @ShellMethod(key = "list room", value = "List room")
+    @ShellMethod(key = "list rooms", value = "List room")
     public String listRoom() {
         var rooms = roomService.findAll();
         StringBuilder res = new StringBuilder();

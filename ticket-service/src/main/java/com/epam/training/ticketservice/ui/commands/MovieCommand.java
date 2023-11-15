@@ -49,7 +49,7 @@ public class MovieCommand extends CommandAvailability {
         return "Movie is not exists";
     }
 
-    @ShellMethod(key = "list movie", value = "List movie")
+    @ShellMethod(key = "list movies", value = "List movies")
     public String listMovie() {
         var movies = movieService.findAll();
         StringBuilder res = new StringBuilder();

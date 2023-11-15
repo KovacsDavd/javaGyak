@@ -32,7 +32,7 @@ public class UserCommand extends CommandAvailability {
 
     @ShellMethod(key = "describe account", value = "Account property")
     public String describe() {
-        return getLogged() ? "Signed in with privileged account " + userService.findAll().get(0).getUsername()
+        return getLogged() ? "Signed in with privileged account '" + userService.findAll().get(0).getUsername() + "'"
                 : "You are not signed in";
     }
 }
