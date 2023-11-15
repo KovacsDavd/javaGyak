@@ -2,12 +2,6 @@ package com.epam.training.ticketservice.core.service;
 
 import com.epam.training.ticketservice.core.entity.User;
 
-import java.util.List;
-
-public interface UserService {
-    void save(User user);
-
+public interface UserService extends CoreService<User> {
     User findByUsernameAndPassword(String username, String password);
-
-    List<User> findAll();
 }
