@@ -1,7 +1,7 @@
 package com.epam.training.ticketservice.ui.commands;
 
 import com.epam.training.ticketservice.core.entity.Room;
-import com.epam.training.ticketservice.core.service.impl.RoomServiceImpl;
+import com.epam.training.ticketservice.core.service.RoomService;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellMethodAvailability;
@@ -9,9 +9,9 @@ import org.springframework.shell.standard.ShellMethodAvailability;
 @ShellComponent
 public class RoomCommand extends CommandAvailability {
 
-    private final RoomServiceImpl roomService;
+    private final RoomService roomService;
 
-    public RoomCommand(RoomServiceImpl roomService) {
+    public RoomCommand(RoomService roomService) {
         this.roomService = roomService;
     }
 
