@@ -63,8 +63,12 @@ public class ScreeningCommand extends CommandAvailability {
         }
         for (var screening : screenings) {
             var movie = movieService.findByTitle(screening.getTitle());
-            res.append(movie.getTitle() + " (" + movie.getGenre() + ", " + movie.getLength() + " minutes), screened in room "
-                    + screening.getroom() + ", at " + screening.getDateTime().format(formatter) + "\n");
+            res.append(movie.getTitle()).append(" (")
+                    .append(movie.getGenre())
+                    .append(", ").append(movie.getLength())
+                    .append(" minutes), screened in room ")
+                    .append(screening.getroom()).append(", at ")
+                    .append(screening.getDateTime().format(formatter)).append("\n");
         }
         return res.toString();
     }

@@ -29,7 +29,7 @@ public class CommandAvailability {
     }
 
     public Availability isAdmin() {
-        return isLogged && userService.findAll().get(0).isAdmin() ?
-                Availability.available() : Availability.unavailable("");
+        return isLogged && userService.findAll().get(0).isAdmin()
+                ? Availability.available() : Availability.unavailable("");
     }
 }
